@@ -35,6 +35,7 @@ jobs:
        # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
     - name: Checkin
       run: |
+        echo %pa%
         python3 checkin.py 
       env: 
         WECHAT_SECRET: ${{ secrets.WECHAT_SECRET }}
