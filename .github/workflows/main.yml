@@ -1,25 +1,17 @@
 name: glados-checkin
 
 on:
-  workflow_dispatch: 
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
   schedule:
-    - cron:  0 10,16 * * * 
-      # 
-      # https://tool.lu/crontab/
-      # https://datetime360.com/cn/utc-cst-china-time/
-  #watch:
-  #    types: started   
+    - cron:  0 16 * * * 
 
 jobs:
-  checkin:
+  build:
     runs-on: ubuntu-latest
-    #if: github.event.repository.owner.id == github.event.sender.id
-    # https://p3terx.com/archives/github-actions-manual-trigger.html
-    
+
     steps:
     - uses: actions/checkout@v2
 
@@ -30,15 +22,12 @@ jobs:
       
     - name: requirements
       run: |
-        pip freeze > requirements.txt
         pip3 install -r requirements.txt
-       # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
+        
     - name: Checkin
       run: |
-        pwd
         python3 checkin.py 
       env: 
-        WECHAT_SECRET: ${{ secrets.WECHAT_SECRET }}
         SERVE: ${{ secrets.SERVE }}
         SCKEY: ${{ secrets.SCKEY }}
         COOKIE: ${{ secrets.COOKIE }}
