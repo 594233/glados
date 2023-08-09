@@ -12,6 +12,7 @@ cookie = os.environ["COOKIE"]
 
 
 def start():
+    print("begin to check in !!!")
     print(cookie)
     url= "https://glados.rocks/api/user/checkin"
     url2= "https://glados.rocks/api/user/status"
