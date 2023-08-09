@@ -2,13 +2,13 @@ import requests,json,os
 
 # 推送开关，填off不开启(默认)，填on同时开启cookie失效通知和签到成功通知
 # sever = os.environ["SERVE"]
-sever = "off"
+sever = "on"
 # 填写pushplus的sckey,不开启推送则不用填
 # sckey = os.environ["SCKEY"]
-sckey = "off"
+sckey = "SCT219134TSgRnarsTJ3v4yvljYHdLFXLL"
 # 填入glados账号对应cookie
 # COOKIES = os.environ["COOKIES"]
-COOKIES = "__stripe_mid=9476cbd5-0c21-4a09-aacd-4fa78fcd80909d5a19; _gid=GA1.2.1350363516.1691398492; Cookie=enabled; Cookie.sig=lbtpENsrE0x6riM8PFTvoh9nepc; koa:sess=eyJ1c2VySWQiOjM0MDUzNiwiX2V4cGlyZSI6MTcxNzQxOTU1NTE4MiwiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=QDCJSmV0qt8j4wKZNuLzKBvpBdo; _gat_gtag_UA_104464600_2=1; _ga=GA1.1.417899199.1666864336; _ga_CZFVKMNT9J=GS1.1.1691557120.34.1.1691560612.0.0.0"
+COOKIES = "__stripe_mid=9476cbd5-0c21-4a09-aacd-4fa78fcd80909d5a19; _gid=GA1.2.1350363516.1691398492; Cookie=enabled; Cookie.sig=lbtpENsrE0x6riM8PFTvoh9nepc; koa:sess=eyJ1c2VySWQiOjM0MDUzNiwiX2V4cGlyZSI6MTcxNzQxOTU1NTE4MiwiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=QDCJSmV0qt8j4wKZNuLzKBvpBdo; _gat_gtag_UA_104464600_2=1; _ga=GA1.1.417899199.1666864336; _ga_CZFVKMNT9J=GS1.1.1691557120.34.1.1691560612.0.0.0&&_gid=GA1.2.145096105.1691462472; koa:sess=eyJ1c2VySWQiOjIzMjY4MiwiX2V4cGlyZSI6MTcxNzQwOTU3NzIzMiwiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=M21lQ0VRMz7B_qwDSVKnVuLiMz8; _gat_gtag_UA_104464600_2=1; _ga=GA1.1.145063380.1691462472; _ga_CZFVKMNT9J=GS1.1.1691560275.5.1.1691560911.0.0.0"
 print(COOKIES)
 cookies=COOKIES.split('&&')
 
