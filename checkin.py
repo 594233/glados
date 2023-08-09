@@ -12,7 +12,7 @@ cookie = os.environ["COOKIE"]
 
 
 def start():
-    
+    print(cookie)
     url= "https://glados.rocks/api/user/checkin"
     url2= "https://glados.rocks/api/user/status"
     referer = 'https://glados.rocks/console/checkin'
